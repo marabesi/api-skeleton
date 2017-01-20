@@ -12,6 +12,8 @@ A simple and up to date silex skeleton to build your API.
   - Add CORS validation into your API
 - PHPDOTENV
   - Allow us to use **.env** files instead of static PHP files to store configurations
+- Annotation
+  - Uses annotation to create routes to be used in the application
 
 # Executables
 

@@ -16,11 +16,12 @@
 		"monolog/monolog": "~1.22",
 		"doctrine/dbal": "~2.5",
 		"euskadi31/cors-service-provider": "~1.0",
-		"vlucas/phpdotenv": "~2.4.0"
+		"vlucas/phpdotenv": "~2.4.0",
+		"ddesrosiers/silex-annotation-provider": "dev-master"
 	},
 	"autoload": {
 		"psr-4": {
-			"App\\": "src/"
+			"App\\": "src/App/"
 		}
 	}
 }
