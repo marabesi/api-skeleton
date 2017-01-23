@@ -17,7 +17,8 @@
 		"doctrine/dbal": "~2.5",
 		"euskadi31/cors-service-provider": "~1.0",
 		"vlucas/phpdotenv": "~2.4.0",
-		"ddesrosiers/silex-annotation-provider": "dev-master"
+		"ddesrosiers/silex-annotation-provider": "dev-master",
+		"lcobucci/jwt": "^3.2"
 	},
 	"autoload": {
 		"psr-4": {

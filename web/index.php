@@ -11,6 +11,7 @@ use Silex\Provider\MonologServiceProvider;
 use Silex\Provider\ServiceControllerServiceProvider;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Lcobucci\JWT\Configuration;
 
 $app = new Silex\Application();
 
@@ -25,6 +26,10 @@ $app->before(function (Request $request) {
     if (0 === strpos($request->headers->get('Content-Type'), 'application/json')) {
         $data = json_decode($request->getContent(), true);
         $request->request->replace(is_array($data) ? $data : array());
+    }
+
+    if (!$request->get('token')) {
+      throw new \Exception('Token not provided');
     }
 });
 
