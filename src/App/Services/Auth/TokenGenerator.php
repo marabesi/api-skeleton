@@ -9,7 +9,6 @@ class TokenGenerator
 {
     private $configuration;
     private $userId;
-    private $dotenv;
     private $context;
 
     public function __construct(TokenBuilder $config)

@@ -18,7 +18,8 @@
 		"euskadi31/cors-service-provider": "~1.0",
 		"vlucas/phpdotenv": "~2.4.0",
 		"ddesrosiers/silex-annotation-provider": "dev-master",
-		"lcobucci/jwt": "^3.2"
+		"lcobucci/jwt": "^3.2",
+		"dflydev/doctrine-orm-service-provider": "^2.0"
 	},
 	"autoload": {
 		"psr-4": {

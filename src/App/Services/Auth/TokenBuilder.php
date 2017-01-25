@@ -6,6 +6,7 @@ use Lcobucci\JWT\Builder;
 
 class TokenBuilder extends Builder
 {
+
     public function toString()
     {
         $token = parent::getToken();
