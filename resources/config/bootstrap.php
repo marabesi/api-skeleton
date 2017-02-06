@@ -26,7 +26,7 @@ $app->register(new HttpCacheServiceProvider(), array("http_cache.cache_dir" =>  
 $app->register(new MonologServiceProvider(), array(
     "monolog.logfile" => __DIR__ . '/../../storage/logs/' . (new \DateTime())->format("Y-m-d") . ".log",
     "monolog.level" => $app["log.level"],
-    "monolog.name" => "application"
+    "monolog.name" => getenv('APP_NAME'),
 ));
 
 $app->error(function (\Exception $e, $code) use ($app) {

@@ -13,13 +13,20 @@ A simple and up to date silex skeleton to build your API.
 - PHPDOTENV
   - Allow us to use **.env** files instead of static PHP files to store configurations
 - Annotation
-  - Uses annotation to create routes to be used in the application
+  - Uses annotation to create routes to be used in the application, you no longer need 
+    a huge routes files 
 
 # Executables
 
 This skeleton provides to you all executables need to run you tests for example or
 to run the composer to install the dependencies, usually you must have those
 installed in your machine but here it is easier as well.
+
+|Executable|Description|
+|----------|-----------|
+|php bin/codeception.phar  |  Executes all the existing tests    |
+|php bin/composer.phar  |  Install all dependencies needed |
+|php bin/phpcs.phar  |   Execute the code sniffer to check the code quality   |
 
 ### Running composer
 
@@ -65,13 +72,31 @@ mv env.example .env
 Now you're ready to go, of course you need to provide valid values to your application to work
 
 ```
-# Whe this is setted to true the debug log is activated
-DEBUG=false
-DB_DRIVER=
-DB_HOST=
-DB_USER=
-DB_PASSWORD=
+DEBUG=true
+ENV=development
+URL=http://localhost:8000
+APP_NAME=SILEX_API_SKELETON
+
+DB_DRIVER=pdo_mysql
+DB_HOST=localhost
+DB_USER=homestead
+DB_PASSWORD=secret
+DB_DATABASE=silex
 ```
+
+To get you going smooth into the skeleton, here goes what each of the variables inside the **.env** file means
+
+|Key|Default value|Description|
+|---|-------------|-----------|
+|ENV| development | Define in which environment the application is running |
+|URL| http://localhost:8000 | The absolute URL where the application is running |
+|APP_NAME| SILEX_API_SKELETON | The name used by monolog, this name identifies the application in the log files |
+|DEBUG| true | When true enables the debug logging |
+|DB_DRIVER| pdo_mysql | Which driver you want to use with doctrine ORM |
+|DB_HOST| localhost | Where your database is located |
+|DB_USER| homestead | The user name to access the database |
+|DB_PASSWORD| secret| The password needed to access the database |
+|DB_DATABSE| silex | The database which the application talks to |
 
 # Directory structure
 
