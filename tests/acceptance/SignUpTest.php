@@ -16,6 +16,7 @@ class SignUpTest extends AppTestCase {
             'password' => '123456'
         ]);
 
-        $this->assertEquals(200, $client->getResponse()->getContent());
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertContains('User has been created successfully', $client->getResponse()->getContent());
     }
 }
