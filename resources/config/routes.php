@@ -7,5 +7,5 @@ $app['annot.controllers'] = array(
 );
 
 $app->register(new DDesrosiers\SilexAnnotations\AnnotationServiceProvider(), array(
-    "annot.controllerDir" => realpath(ROOT_PATH . "/src/Controllers"),
+    'annot.controllerDir' => realpath('./src/Controllers'),
 ));

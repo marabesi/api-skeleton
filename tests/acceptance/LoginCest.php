@@ -1,12 +1,10 @@
 <?php
 
-namespace App\Tests\Acept;
+namespace App\Tests\Acceptance;
 
-use \TestCase;
+class LoginCest {
 
-class LoginCept extends TestCase {
-
-    public function apiIsUpAndRunning(\AcceptanceTester $I)
+    public function shouldGetJWTToken(\AcceptanceTester $I)
     {
         $I->wantTo('I want to login and get a JWT token');
         $I->sendPOST('/login', ['email' => '', 'password' => '']);

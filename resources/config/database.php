@@ -16,13 +16,13 @@ $app->register(new DoctrineServiceProvider(), array(
 ));
 
 $app->register(new DoctrineOrmServiceProvider, array(
-    'orm.proxies_dir' => ROOT_PATH . '/storage/cache/proxies',
+    'orm.proxies_dir' => __DIR__ . '/../../storage/cache/proxies',
     'orm.em.options' => array(
         'mappings' => array(
             array(
                 'type' => 'annotation',
                 'namespace' => 'App\Entities',
-                'path' => ROOT_PATH . '/src/App/Entities',
+                'path' => __DIR__ . '/../../src/App/Entities',
             ),
         ),
     ),

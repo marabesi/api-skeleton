@@ -1,4 +1,4 @@
-class_name: ServicesTester
+class_name: UnitTester
 modules:
     enabled:
         - \Helper\Services

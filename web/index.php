@@ -11,10 +11,10 @@ $app->register(new \Euskadi31\Silex\Provider\CorsServiceProvider);
 
 $app->register(new ServiceControllerServiceProvider());
 
-$app->register(new HttpCacheServiceProvider(), array("http_cache.cache_dir" => ROOT_PATH . "/storage/cache",));
+$app->register(new HttpCacheServiceProvider(), array("http_cache.cache_dir" =>  __DIR__ . '/../storage/cache',));
 
 $app->register(new MonologServiceProvider(), array(
-    "monolog.logfile" => ROOT_PATH . "/storage/logs/" . (new \DateTime())->format("Y-m-d") . ".log",
+    "monolog.logfile" => "./storage/logs/" . (new \DateTime())->format("Y-m-d") . ".log",
     "monolog.level" => $app["log.level"],
     "monolog.name" => "application"
 ));

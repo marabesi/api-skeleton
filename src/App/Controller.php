@@ -38,6 +38,4 @@ class Controller
         $this->entityManager = $entityManager;
         return $this;
     }
-    
-    
 }

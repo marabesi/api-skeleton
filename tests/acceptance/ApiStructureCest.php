@@ -1,15 +1,13 @@
 <?php
 
-namespace App\Tests\Acept;
+namespace App\Tests\Acceptance;
 
-use \TestCase;
-
-class ApiStructureCept extends TestCase {
+class ApiStructureCest {
 
     public function apiIsUpAndRunning(\AcceptanceTester $I)
     {
         $token = '123456';
-
+        
         $I->wantTo('make sure the api structure is up and running');
         $I->sendGET('/?token=' . $token);
         $I->seeResponseCodeIs(\Codeception\Util\HttpCode::OK);

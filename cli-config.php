@@ -4,7 +4,7 @@ require 'vendor/autoload.php';
 require 'resources/config/bootstrap.php';
 
 $newDefaultAnnotationDrivers = array(
-    ROOT_PATH . '/src/App',
+    './src/App',
 );
 
 $config = new \Doctrine\ORM\Configuration();
