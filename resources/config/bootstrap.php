@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 
 $app = new Silex\Application();
 
-$dotenv = new \Dotenv\Dotenv(__DIR__ . '/../../', '.env');
+$dotenv = new \Dotenv\Dotenv(realpath(__DIR__ . '/../../'), '.env');
 $dotenv->load();
 
 require_once __DIR__ . '/../../resources/config/middleware.php';

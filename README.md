@@ -125,6 +125,26 @@ In this section you can know more about the structure being used
 # Tests
 
 This project uses the [codeception](http://codeception.com/) framework to run the tests. Codeception is a easy
-and a complete solution to run unit, function and acceptance test all at once.
+and a complete solution to run unit, function and acceptance test all at once and with one tool.
 
-# Log
+
+# Docker container
+
+Make sure to have the right permissions before start the API, follow
+the table shown below to know which permission you should apply
+
+|Path|Permission|Command|
+|---|-----------|-------|
+|storage/| Read and Write | chmod -R 777 storage/|
+
+This API skeleton ships with a docker file to speed up your environment setup, basically you must have
+docker installed in your machine and then run the following commands in your terminal
+
+```
+git clone https://github.com/marabesi/silex-api-skeleton.git && cd silex-api-skeleton
+
+cd docker && docker build . -t acme-api
+
+docker run -d -v WHERE_YOUR_SILEX_API_IS:/var/www/html -p 80:80 acme-api
+```
+
