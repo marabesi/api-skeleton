@@ -3,6 +3,6 @@ modules:
   enabled:
       - Db
       - REST:
-          url: http://localhost:8000
+          url: "%URL%"
           depends: PhpBrowser
           part: Json
