@@ -9,6 +9,7 @@ server {
 
     location / {
         try_files $uri $uri/ =404;
+        rewrite / /index.php last;
     }
 
     location ~ \.php$ {
