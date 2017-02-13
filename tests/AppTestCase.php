@@ -17,7 +17,7 @@ class AppTestCase extends WebTestCase
 
         $app["db.options"] = [
             "driver" => 'pdo_sqlite',
-            "path" => './storage/tests/sqlite.db',
+            "path" => __DIR__ . '/../storage/tests/sqlite.db',
             "memory" => false,
         ];
 
