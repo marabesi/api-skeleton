@@ -7,7 +7,10 @@ RUN apt-get install -y php7.0-opcache php7.0-mysql php7.0-sqlite php7.0-phpdbg p
 RUN apt-get install -y php7.0-imap php7.0-ldap php7.0-pgsql php7.0-pspell php7.0-recode
 RUN apt-get install -y php7.0-snmp php7.0-tidy php7.0-dev php7.0-intl php7.0-gd php7.0-curl
 RUN apt-get install -y php7.0-zip php7.0-xml
+RUN apt-get install -y libssl-dev libcurl4-openssl-dev pkg-config libssl-dev libsslcommon2-dev
 RUN apt-get install -y mongodb git
+RUN apt-get install php-mongodb
+RUN pecl install mongodb
 
 ENV nginx_vhost /etc/nginx/sites-available/default
 ENV php_conf /etc/php/7.0/fpm/php.ini
