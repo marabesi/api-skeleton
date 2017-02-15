@@ -21,7 +21,8 @@
 		"lcobucci/jwt": "^3.2",
 		"dflydev/doctrine-orm-service-provider": "^2.0",
 		"alcaeus/mongo-php-adapter": "^1.0",
-		"doctrine/mongodb-odm": "^1.1"
+		"doctrine/mongodb-odm": "^1.1",
+		"saxulum/saxulum-doctrine-mongodb-odm-provider": "^2.3"
 	},
 	"autoload": {
 		"psr-4": {

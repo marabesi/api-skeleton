@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "872aa92ffc8a8e85ec7e69fcf3aadc36",
+    "content-hash": "ed74c5df2e58370804425b0f8ba08730",
     "packages": [
         {
             "name": "alcaeus/mongo-php-adapter",
@@ -1270,6 +1270,112 @@
                 "psr-3"
             ],
             "time": "2016-10-10T12:19:37+00:00"
+        },
+        {
+            "name": "saxulum/saxulum-doctrine-mongodb-odm-provider",
+            "version": "2.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/saxulum/saxulum-doctrine-mongodb-odm-provider.git",
+                "reference": "23d28af45991b7b9ebfbbc1d8c9cef9a1934531c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/saxulum/saxulum-doctrine-mongodb-odm-provider/zipball/23d28af45991b7b9ebfbbc1d8c9cef9a1934531c",
+                "reference": "23d28af45991b7b9ebfbbc1d8c9cef9a1934531c",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/mongodb-odm": "~1.0",
+                "php": "~7.0|~5.3",
+                "pimple/pimple": ">=2.1,<4",
+                "saxulum/saxulum-doctrine-mongodb-provider": "~2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.1"
+            },
+            "suggest": {
+                "dflydev/psr0-resource-locator-service-provider": "1.0.*@dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Saxulum\\DoctrineMongoDbOdm\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dominik Zogg",
+                    "email": "dominik.zogg@gmail.com"
+                }
+            ],
+            "description": "Saxulum Doctrine MongoDB ODM Provider",
+            "keywords": [
+                "cilex",
+                "doctrine",
+                "mongo",
+                "mongodb",
+                "odm",
+                "pimple",
+                "saxulum",
+                "silex"
+            ],
+            "time": "2016-08-05T11:33:28+00:00"
+        },
+        {
+            "name": "saxulum/saxulum-doctrine-mongodb-provider",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/saxulum/saxulum-doctrine-mongodb-provider.git",
+                "reference": "63131aa8b80a0b6925266fe385cc1fcfaaffe568"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/saxulum/saxulum-doctrine-mongodb-provider/zipball/63131aa8b80a0b6925266fe385cc1fcfaaffe568",
+                "reference": "63131aa8b80a0b6925266fe385cc1fcfaaffe568",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/mongodb": "~1.1",
+                "php": "~7.0|~5.3",
+                "pimple/pimple": ">=2.1,<4",
+                "psr/log": "1.0.*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Saxulum\\DoctrineMongoDb": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dominik Zogg",
+                    "email": "dominik.zogg@gmail.com"
+                }
+            ],
+            "description": "Saxulum Doctrine MongoDB Provider",
+            "keywords": [
+                "cilex",
+                "doctrine",
+                "mongo",
+                "mongodb",
+                "pimple",
+                "saxulum",
+                "silex"
+            ],
+            "time": "2016-08-05T10:38:12+00:00"
         },
         {
             "name": "silex/silex",

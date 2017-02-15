@@ -28,18 +28,35 @@ $app->register(new DoctrineOrmServiceProvider, array(
     ),
 ));
 
-use Doctrine\MongoDB\Connection;
-use Doctrine\ODM\MongoDB\Configuration;
-use Doctrine\ODM\MongoDB\DocumentManager;
-use Doctrine\ODM\MongoDB\Mapping\Driver\AnnotationDriver;
+/**
+ * MONGODb
+ */
 
-AnnotationDriver::registerAnnotationClasses();
+use Saxulum\DoctrineMongoDb\Provider\DoctrineMongoDbProvider;
+use Saxulum\DoctrineMongoDbOdm\Provider\DoctrineMongoDbOdmProvider;
 
-$config = new Configuration();
-$config->setProxyDir(__DIR__ . '/../../storage/cache/proxies');
-$config->setProxyNamespace('Proxies');
-$config->setHydratorDir(__DIR__ . '/../../storage/cache/hydrators');
-$config->setHydratorNamespace('Hydrators');
-$config->setMetadataDriverImpl(AnnotationDriver::create(__DIR__ . '/../../src/App/Documents'));
+$app->register(new DoctrineMongoDbProvider, array(
+    "mongodb.options" => array(
+        "server" => "mongodb://" . getenv('DB_HOST'),
+        "options" => array(
+            "username" => getenv('DB_USER'),
+            "password" => getenv('DB_PASSWORD'),
+            "db" => getenv('DB_DATABASE'),
+        ),
+    ),
+));
 
-$dm = DocumentManager::create(new Connection(), $config);
+$app->register(new DoctrineMongoDbOdmProvider, array(
+    "mongodbodm.proxies_dir" => __DIR__ . '/../../storage/cache/proxies',
+    "mongodbodm.hydrator_dir" => __DIR__ . '/../../storage/cache/hydrator',
+    "mongodbodm.dm.options" => array(
+        "database" => "test",
+        "mappings" => array(
+            array(
+                'type' => 'annotation',
+                'namespace' => 'App\Entities',
+                'path' => __DIR__ . '/../../src/App/Entities',
+            ),
+        ),
+    ),
+));
