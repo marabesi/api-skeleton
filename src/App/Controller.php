@@ -18,7 +18,7 @@ class Controller
      */
     public function __construct(Application $app)
     {
-        $this->entityManager = $app['orm.em'];
+        $this->entityManager = $app['mongodbodm.dm'];
     }
 
     /**

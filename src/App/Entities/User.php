@@ -2,31 +2,22 @@
 
 namespace App\Entities;
 
-/**
- * @Entity
- * @Table(name="users")
- */
+use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
+
+/** @ODM\Document(collection="users") */
 class User
 {
-    /**
-     * @Id @Column(type="integer")
-     * @GeneratedValue
-     */
+
+    /** @ODM\Id */
     private $id;
 
-    /**
-     * @Column(length=200)
-     */
+    /** @ODM\Field(type="string") */
     private $email;
 
-    /**
-     * @Column(length=255)
-     */
+    /** @ODM\Field(type="string") */
     private $password;
 
-    /**
-     * @Column(type="datetime", name="created_at")
-     */
+    /** @ODM\Field(type="date") */
     private $createdAt;
 
     /**

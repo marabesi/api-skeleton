@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ed74c5df2e58370804425b0f8ba08730",
+    "content-hash": "45f343b55cbbd6c78b1db86c7090d7c0",
     "packages": [
         {
             "name": "alcaeus/mongo-php-adapter",
@@ -120,63 +120,6 @@
                 "silex"
             ],
             "time": "2017-01-25 05:08:15"
-        },
-        {
-            "name": "dflydev/doctrine-orm-service-provider",
-            "version": "v2.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dflydev/dflydev-doctrine-orm-service-provider.git",
-                "reference": "84b3f4887a999cbd017010f758122d8409cccac0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dflydev/dflydev-doctrine-orm-service-provider/zipball/84b3f4887a999cbd017010f758122d8409cccac0",
-                "reference": "84b3f4887a999cbd017010f758122d8409cccac0",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/orm": "~2.3",
-                "php": ">=5.3.3",
-                "pimple/pimple": ">=2.1,<4"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Dflydev\\Provider\\DoctrineOrm\\": "src/Dflydev/Provider/DoctrineOrm"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Dragonfly Development Inc.",
-                    "email": "info@dflydev.com",
-                    "homepage": "http://dflydev.com"
-                },
-                {
-                    "name": "Beau Simensen",
-                    "email": "beau@dflydev.com",
-                    "homepage": "http://beausimensen.com"
-                }
-            ],
-            "description": "Doctrine ORM Service Provider",
-            "homepage": "http://dflydev.com/projects/doctrine-orm-service-provider/",
-            "keywords": [
-                "cilex",
-                "doctrine",
-                "orm",
-                "pimple",
-                "silex"
-            ],
-            "time": "2015-09-07T12:14:46+00:00"
         },
         {
             "name": "doctrine/annotations",
