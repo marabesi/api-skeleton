@@ -15,6 +15,7 @@ RUN pecl install mongodb
 ENV nginx_vhost /etc/nginx/sites-available/default
 ENV php_conf /etc/php/7.0/fpm/php.ini
 ENV nginx_conf /etc/nginx/nginx.conf
+ENV mongodb_conf /etc/mongodb.conf
 
 COPY default ${nginx_vhost}
 
@@ -23,10 +24,16 @@ RUN sed -i -e 's/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' ${php_conf} && \
 
 RUN sed -i -e 's/display_errors = Off/display_errors = On/g' ${php_conf}
 
+RUN sed -i -e 's/bind_ip = 127.0.0.1/bind_ip = 0.0.0.0/g' ${mongodb_conf}
+
+RUN sed -i -e 's/#port = 27017/port = 27017/g' ${mongodb_conf}
+
 RUN mkdir -p /run/php && \
     mkdir -p /var/www/html && \
     chown -R www-data:www-data /var/www/html && \
-    chown -R www-data:www-data /run/php
+    chown -R www-data:www-data /run/php && \
+    mkdir -p /data/db && \
+    chown `id -u` /data/db
 
 VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx", "/var/www/html"]
 
