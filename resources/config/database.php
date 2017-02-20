@@ -19,11 +19,11 @@ $app->register(new DoctrineServiceProvider(), array(
 $app->register(new DoctrineMongoDbProvider, array(
     'mongodb.options' => array(
         'server' => 'mongodb://' . getenv('DB_HOST'),
-        'options' => array(
-            'username' => getenv('DB_USER'),
-            'password' => getenv('DB_PASSWORD'),
-            'db' => getenv('DB_DATABASE'),
-        ),
+//        'options' => array(
+//            'username' => getenv('DB_USER'),
+//            'password' => getenv('DB_PASSWORD'),
+//            'db' => getenv('DB_DATABASE'),
+//        ),
     ),
 ));
 
