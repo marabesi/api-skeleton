@@ -63,5 +63,4 @@ class Resource
             'message' => 'Updating you data!',
         ]);
     }
-
 }
