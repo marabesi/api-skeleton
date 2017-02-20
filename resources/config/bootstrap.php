@@ -16,6 +16,7 @@ require_once __DIR__ . '/../../resources/config/middleware.php';
 require_once __DIR__ . '/../../resources/config/routes.php';
 require_once __DIR__ . '/../../resources/config/database.php';
 require_once __DIR__ . '/../../resources/config/log.php';
+require_once __DIR__ . '/../../resources/config/swagger.php';
 
 $app->register(new \Euskadi31\Silex\Provider\CorsServiceProvider);
 
