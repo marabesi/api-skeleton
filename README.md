@@ -1,5 +1,7 @@
 # Silex API Skeleton
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/57726bad38a349c1b01083c11706fb8f)](https://www.codacy.com/app/matheus-marabesi/silex-api-skeleton?utm_source=github.com&utm_medium=referral&utm_content=marabesi/silex-api-skeleton&utm_campaign=badger)
+
 A simple and up to date silex skeleton to build your API.
 
 # Packages
