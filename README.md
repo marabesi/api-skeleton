@@ -33,7 +33,7 @@ installed in your machine but here it is easier as well.
 
 ### Running composer
 
-```
+```shell
 git clone https://github.com/marabesi/silex-api-skeleton.git && cd silex-api-skeleton
 
 php bin/composer.phar install
@@ -41,7 +41,7 @@ php bin/composer.phar install
 
 ### Running phpcs
 
-```
+```shell
 git clone https://github.com/marabesi/silex-api-skeleton.git && cd silex-api-skeleton
 
 php bin/phpcs.phar -h
@@ -49,7 +49,7 @@ php bin/phpcs.phar -h
 
 ### Running codeception
 
-```
+```shell
 git clone https://github.com/marabesi/silex-api-skeleton.git && cd silex-api-skeleton
 
 php bin/codecept.phar -h
@@ -68,13 +68,13 @@ The **env.example** inside this project has some default keys to be used, but to
 you need first rename the file in the project root. To do that just run the following command
 inside the project's folder
 
-```
+```shell
 mv env.example .env
 ```
 
 Now you're ready to go, of course you need to provide valid values to your application to work
 
-```
+```php
 DEBUG=true
 ENV=development
 URL=http://localhost:8000
@@ -143,11 +143,11 @@ the table shown below to know which permission you should apply
 This API skeleton ships with a docker file to speed up your environment setup, basically you must have
 docker installed in your machine and then run the following commands in your terminal
 
-```
+```shell
 git clone https://github.com/marabesi/silex-api-skeleton.git && cd silex-api-skeleton
 
-cd docker && docker build . -t acme-api
+cd docker && docker build . -t silex-api
 
-docker run -d -v WHERE_YOUR_SILEX_API_IS:/var/www/html -p 80:80 acme-api
+docker run -d -v WHERE_YOUR_SILEX_API_IS:/var/www/html -p 80:80 silex-api
 ```
 
