@@ -5,7 +5,7 @@ php:
 - hhvm
 
 before_script:
-  - ./mongo-php-driver-installer.sh
+  - sudo ./mongo-php-driver-installer.sh
   - composer install
 
 script:
