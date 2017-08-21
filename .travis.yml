@@ -5,10 +5,7 @@ php:
 - hhvm
 
 before_script:
-  - sudo apt-get install -y libssl-dev libcurl4-openssl-dev pkg-config libssl-dev libsslcommon2-dev                                           
-  - sudo apt-get install -y mongodb git                                                                                                       
-  - sudo apt-get install php-mongodb                                                                                                          
-  - sudo pecl install mongodb
+  - ./mongo-php-driver-installer.sh
   - composer install
 
 script:
