@@ -16,3 +16,5 @@ sudo apt-get install -y libssl-dev libcurl4-openssl-dev pkg-config libssl-dev li
 
 sudo apt-get install php-mongodb -y
 sudo pecl install mongodb -y
+
+echo "extension=mongo.so" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"`
