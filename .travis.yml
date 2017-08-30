@@ -6,6 +6,7 @@ php:
 
 before_script:
   - sudo sh ./mongo-php-driver-installer.sh
+  - pecl -q install mongo && echo "extension=mongo.so" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"`
   - composer install
 
 script:
