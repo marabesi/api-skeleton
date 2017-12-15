@@ -148,6 +148,6 @@ git clone https://github.com/marabesi/silex-api-skeleton.git && cd silex-api-ske
 
 cd docker && docker build . -t silex-api
 
-docker run -d -v WHERE_YOUR_SILEX_API_IS:/var/www/html -p 80:80 silex-api
+docker run -d -v WHERE_YOUR_SILEX_API_IS:/var/www/html -p 80:80 -p 27017:27017 silex-api
 ```
 
