@@ -5,6 +5,7 @@ php:
 - hhvm
 
 before_script:
+  - pecl install -f mongo-1.2.12
   - phpenv config-add php-travis.ini
   - composer install
 
