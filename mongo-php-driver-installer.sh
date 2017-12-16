@@ -12,7 +12,7 @@ sudo apt-get install -y php7.0-zip php7.0-xml
 sudo apt-get install -y libssl-dev libcurl4-openssl-dev pkg-config libssl-dev libsslcommon2-dev
 
 sudo pecl -q install mongodb -y
-sudo apt-get install php-mongodb -y
+#sudo apt-get install php-mongodb -y
 
 php --ini
 
