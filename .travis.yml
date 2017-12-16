@@ -5,8 +5,6 @@ php:
 - hhvm
 
 before_script:
-  - sudo sh ./mongo-php-driver-installer.sh
-  - echo "extension=mongo.so" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"`
   - phpenv config-add php-travis.ini
   - composer install
 
