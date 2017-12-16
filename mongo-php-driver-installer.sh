@@ -14,7 +14,9 @@ sudo apt-get install -y php7.0-snmp php7.0-tidy php7.0-dev php7.0-intl php7.0-gd
 sudo apt-get install -y php7.0-zip php7.0-xml
 sudo apt-get install -y libssl-dev libcurl4-openssl-dev pkg-config libssl-dev libsslcommon2-dev
 
-sudo apt-get install php-mongodb -y
 sudo pecl install mongodb -y
+sudo apt-get install php-mongodb -y
+
+echo php --ini
 
 echo "extension=mongo.so" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"`
