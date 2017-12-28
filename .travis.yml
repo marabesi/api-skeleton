@@ -7,7 +7,7 @@ php:
 before_script:
 #  - sudo sh ./mongo-php-driver-installer.sh
   - phpenv config-add php-travis.ini
-  - composer install
+  - composer install --ignore-platform-reqs 
 
 script:
   - mkdir -p build/logs
