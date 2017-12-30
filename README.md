@@ -105,7 +105,7 @@ To get you going smooth into the skeleton, here goes what each of the variables 
 
 In this section you can know more about the structure being used
 
-```
+```shell
 |__bin                           # executables
     |__ codecept.phar            #
     |__ composer.phar            #  
@@ -150,4 +150,12 @@ cd docker && docker build . -t silex-api
 
 docker run -d -v WHERE_YOUR_SILEX_API_IS:/var/www/html -p 80:80 -p 27017:27017 silex-api
 ```
+
+Is important to mention that the mongodb instance that runs inside the container doesn't persists data by default. Is required to map a folder outside the container using the flag `-v`as shown below.
+
+```shell
+docker run -d -v /MY/FOLDER/:/data/db -v WHERE_YOUR_SILEX_API_IS:/var/www/html -p 80:80 -p 27017:27017 silex-api
+```
+
+Replace `/MY/FOLDER/` to any path available in your host system, such as `/tmp`, `/home` etc.
 
