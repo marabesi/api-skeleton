@@ -11,6 +11,7 @@ RUN apt-get install -y libssl-dev libcurl4-openssl-dev pkg-config libssl-dev lib
 RUN apt-get install -y mongodb git
 RUN apt-get install php-mongodb
 RUN pecl install mongodb
+RUN apt-get install snmp
 
 ENV nginx_vhost /etc/nginx/sites-available/default
 ENV php_conf /etc/php/7.0/fpm/php.ini
