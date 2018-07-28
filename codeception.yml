@@ -13,13 +13,4 @@ extensions:
     enabled:
         - Codeception\Extension\RunFailed
 params:
-    - .env
-modules:
-    config:
-        Db:
-            dsn: 'sqlite:./storage/tests/sqlite.db'
-            user: ''
-            password: ''
-            dump: tests/_data/dump.sql
-            populate: true
-            cleanup: true
+    - .env.testing

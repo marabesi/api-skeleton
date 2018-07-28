@@ -7,3 +7,4 @@ app.db
 tests/_output/*
 .env
 tests/_support/_generated/*
+.env.testing
