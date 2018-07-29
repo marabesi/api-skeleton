@@ -5,7 +5,6 @@ use Saxulum\DoctrineMongoDb\Provider\DoctrineMongoDbProvider;
 use Saxulum\DoctrineMongoDbOdm\Provider\DoctrineMongoDbOdmProvider;
 
 $app['db.options'] = array(
-//    'driver' => getenv('DB_DRIVER'),
     'dbname' => getenv('DB_DATABASE'),
     'host' => getenv('DB_HOST'),
     'user' => getenv('DB_USER'),
@@ -19,11 +18,6 @@ $app->register(new DoctrineServiceProvider(), array(
 $app->register(new DoctrineMongoDbProvider, array(
     'mongodb.options' => array(
         'server' => 'mongodb://' . getenv('DB_HOST'),
-//        'options' => array(
-//            'username' => getenv('DB_USER'),
-//            'password' => getenv('DB_PASSWORD'),
-//            'db' => getenv('DB_DATABASE'),
-//        ),
     ),
 ));
 

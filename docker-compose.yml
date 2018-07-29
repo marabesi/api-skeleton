@@ -1,0 +1,17 @@
+version: '2'
+services:
+  web:
+    build: './docker'
+    ports:
+      - '80:80'
+    volumes:
+      - './:/var/www/html'
+  database:
+    image: 'mongo:3.2'
+    ports:
+      - '27017:27017'
+    volumes:
+      - './storage/data:/data/db'
+    links:
+      - web
+
