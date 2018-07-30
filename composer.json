@@ -22,7 +22,8 @@
 		"doctrine/mongodb-odm": "^1.2",
 		"saxulum/saxulum-doctrine-mongodb-odm-provider": "^2.3",
 		"doctrine/orm": "^2.5",
-		"basster/silex-simple-swagger-provider": "^2.0"
+		"basster/silex-simple-swagger-provider": "^2.0",
+		"sokil/php-mongo-migrator": "^0.6.0"
 	},
 	"autoload": {
 		"psr-4": {

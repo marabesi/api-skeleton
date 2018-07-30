@@ -1,0 +1,11 @@
+default_environment: common
+
+path:
+    migrations: migrations
+
+environments:
+    common:
+        dsn: mongodb://"%env(DB_HOST)%"
+        default_database: %env(DB_DATABASE)%
+        log_database: %env(DB_DATABASE)%
+        log_collection: migrations

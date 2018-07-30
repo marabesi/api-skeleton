@@ -1,7 +1,6 @@
 class_name: AcceptanceTester
 modules:
   enabled:
-      - Db
       - REST:
           url: "%URL%"
           depends: PhpBrowser

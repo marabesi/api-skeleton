@@ -13,14 +13,6 @@ class AppTestCase extends WebTestCase
      */
     public function createApplication()
     {
-        $app = include_once __DIR__ . '/../resources/config/bootstrap.php';
-
-        $app["db.options"] = [
-            "driver" => 'pdo_sqlite',
-            "path" => __DIR__ . '/../storage/tests/sqlite.db',
-            "memory" => false,
-        ];
-
-        return $app;
+        return include_once __DIR__ . '/../resources/config/bootstrap.php';
     }
 }
