@@ -32,5 +32,10 @@
 		"classmap": [
 			"tests/AppTestCase.php"
 		]
+	},
+	"require-dev": {
+		"codeception/codeception": "^4.1",
+		"codeception/module-rest": "^1.2",
+		"codeception/module-phpbrowser": "^1.0"
 	}
 }

@@ -1,6 +1,5 @@
 server {
     listen 80 default_server;
-    listen [::]:80 default_server;
 
     root /var/www/html/web;
     index index.html index.htm index.nginx-debian.html index.php;
@@ -14,7 +13,7 @@ server {
 
     location ~ \.php$ {
         include snippets/fastcgi-php.conf;
-        fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+        fastcgi_pass unix:/run/php/php7.2-fpm.sock;
     }
 
     # deny access to .htaccess files, if Apache's document root

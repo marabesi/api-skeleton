@@ -1,20 +1,20 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 RUN apt-get update
 
-RUN apt-get install -y nginx php7.0-fpm php7.0-cli php7.0-common php7.0-json
-RUN apt-get install -y php7.0-opcache php7.0-mysql php7.0-sqlite php7.0-phpdbg php7.0-mbstring php7.0-gd
-RUN apt-get install -y php7.0-imap php7.0-ldap php7.0-pgsql php7.0-pspell php7.0-recode
-RUN apt-get install -y php7.0-snmp php7.0-tidy php7.0-dev php7.0-intl php7.0-gd php7.0-curl
-RUN apt-get install -y php7.0-zip php7.0-xml
-RUN apt-get install -y libssl-dev libcurl4-openssl-dev pkg-config libssl-dev libsslcommon2-dev
+RUN apt-get install -y nginx php7.2-fpm php7.2-cli php7.2-common php7.2-json
+RUN apt-get install -y php7.2-opcache php7.2-mysql php7.2-sqlite php7.2-phpdbg php7.2-mbstring php7.2-gd
+RUN apt-get install -y php7.2-imap php7.2-ldap php7.2-pgsql php7.2-pspell php7.2-recode
+RUN apt-get install -y php7.2-snmp php7.2-tidy php7.2-dev php7.2-intl php7.2-gd php7.2-curl
+RUN apt-get install -y php7.2-zip php7.2-xml
+RUN apt-get install -y libssl-dev libcurl4-openssl-dev pkg-config libssl-dev
 RUN apt-get install -y git
 RUN apt-get install php-mongodb
 RUN pecl install mongodb
 RUN apt-get install snmp
 
 ENV nginx_vhost /etc/nginx/sites-available/default
-ENV php_conf /etc/php/7.0/fpm/php.ini
+ENV php_conf /etc/php/7.2/fpm/php.ini
 ENV nginx_conf /etc/nginx/nginx.conf
 
 COPY default ${nginx_vhost}
