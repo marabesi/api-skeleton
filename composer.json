@@ -16,7 +16,7 @@
 		"monolog/monolog": "~1.22 || ~2.0",
 		"doctrine/dbal": "~2.5",
 		"euskadi31/cors-service-provider": "~1.0",
-		"vlucas/phpdotenv": "~2.4.0 || ~5.2.0",
+		"vlucas/phpdotenv": "~2.4.0 || ~5.2.0 || ~5.3.0",
 		"ddesrosiers/silex-annotation-provider": "dev-master",
 		"lcobucci/jwt": "^3.2",
 		"doctrine/mongodb-odm": "^1.2",
