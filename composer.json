@@ -18,7 +18,7 @@
 		"euskadi31/cors-service-provider": "~1.0",
 		"vlucas/phpdotenv": "~2.4.0 || ~5.2.0",
 		"ddesrosiers/silex-annotation-provider": "dev-master",
-		"lcobucci/jwt": "^3.2",
+		"lcobucci/jwt": "^3.2 || ^4.0",
 		"doctrine/mongodb-odm": "^1.2",
 		"saxulum/saxulum-doctrine-mongodb-odm-provider": "^2.3",
 		"doctrine/orm": "^2.5",
